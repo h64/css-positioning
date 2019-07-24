@@ -9,3 +9,79 @@ body {
   font-size: 16px;
   margin: 0;
 }
+
+.blue-background {
+  /* 1. Using the bgtile.png */
+  /* background-image: url("../img/bgtile.png"); */
+  /* 2. using CSS3 gradient */
+  background-image: linear-gradient(#1c5380, #06365f);
+  
+  height: 35vh;  
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+}
+/* Grid Layout */
+.grid {
+  /* border: 2px solid orange; */
+  margin: auto;
+  padding-top: 10vh;
+  max-width: 60vw;
+  
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: 
+    "phone top"
+    "phone mid"
+    "phone bot";
+  /* grid-gap pushes the two columns away from each other */
+  grid-gap: 3%;
+  
+}
+.grid-img {
+  grid-area: phone;
+}
+.grid-top {
+  grid-area: top;
+  /* This div is a flexbox within the grid!! */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.grid-text {
+  grid-area: mid;
+  background-image: url("../img/frame.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5%;
+}
+.grid-downloads {
+  grid-area: bot;
+}
+
+/* Misc styling */
+h1 {
+  color: #1c5380;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+li {
+  display: inline-block;
+  padding: 10px;
+}
+.button {
+  /* centering the text */
+  display: flex;
+  align-items: center;
+  /* styling the "button" */
+  color: white;
+  border: 1px solid #06365f;
+  padding: 10px;
+  background-image: linear-gradient(#1c5380, #06365f);
+}
